@@ -11,7 +11,7 @@ while True:
             checkout += price_input
             shopping_cart.append(user_input)
         except:
-            print("An exception occurred. Sorry for the inconvenience.")
+            print("An exception occured. Sorry for inconvenience")
 
 
 print(f"Your shopping cart: {shopping_cart}, payment: {checkout}$")
