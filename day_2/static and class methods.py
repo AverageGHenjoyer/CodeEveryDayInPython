@@ -1,14 +1,16 @@
-class Person:
+class Person(object):
     population = 50
 
     def __init__(self, name, age):
         self.name = name,
         self.age = age
 
-    def get_population(self, cls):
+    @classmethod
+    def get_population(cls):
         return cls.population
 
-    def is_adult(self, age):
+    @staticmethod
+    def is_adult(age):
         return age >= 18
 
     def display_info(self):
@@ -17,3 +19,5 @@ class Person:
 
 newPerson = Person("Peter", 19)
 newPerson.display_info()
+print(Person.is_adult(17))
+print(Person.get_population())
