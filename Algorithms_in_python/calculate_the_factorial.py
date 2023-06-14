@@ -1,6 +1,3 @@
-user_input = int(input("Give me a number: \n"))
-
-
 def calc_the_factorial(x):
     if x == 0:
         return 1
@@ -8,4 +5,13 @@ def calc_the_factorial(x):
         return x*calc_the_factorial(x-1)
 
 
-print(f"Calculated factorial: {calc_the_factorial(user_input)}")
+while True:
+    try:
+        user_input = int(input("Give me a number: \n"))
+    except ValueError:
+        print("Something has gone wrong. Please try again.")
+    else:
+        print(f"Calculated factorial: {calc_the_factorial(user_input)}")
+        break
+
+
